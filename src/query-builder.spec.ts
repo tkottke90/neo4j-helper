@@ -1,11 +1,11 @@
 import { RelationshipDirections } from './database';
-import { Neo4jQueryBuilder, Node } from './query-builder';
+import { Neo4jQueryBuilder, NodeSelector } from './query-builder';
 
 type BuildRelationShipRefCases = Array<
   [
     string,
-    Partial<Node<string, string>>,
-    Partial<Node<string, string>>,
+    Partial<NodeSelector<string, string>>,
+    Partial<NodeSelector<string, string>>,
     RelationshipDirections | undefined,
     (
       | Partial<{

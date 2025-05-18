@@ -1,6 +1,6 @@
 {
   "name": "neo4j-helper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility module for working with the Neo4j Graph Database",
   "main": "dist/index.js",
   "scripts": {
@@ -10,6 +10,24 @@
     "prepack": "npm run format && npm run lint && npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./query-builder": {
+      "import": "./dist/query-builder.js",
+      "require": "./dist/query-builder.js"
+    },
+    "./neo4j": {
+      "import": "./dist/neo4j.js",
+      "require": "./dist/neo4j.js"
+    },
+    "./utils": {
+      "import": "./dist/helpers.js",
+      "require": "./dist/helpers.js"
+    }
   },
   "files": [
     "dist",
@@ -22,23 +40,23 @@
   "author": "Thomas Kottke <t.kottke90@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "neo4j-driver": "^5.28.1"
+    "dotenv": "16.0.1",
+    "neo4j-driver": "5.28.1"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.14",
-    "@types/node": "^18.19.55",
-    "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "@typescript-eslint/parser": "^5.33.1",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-unused-imports": "^4.1.4",
-    "jest": "^29.7.0",
-    "prettier": "^3.3.3",
-    "ts-jest": "^29.3.3",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.6.3"
+    "@types/jest": "29.5.14",
+    "@types/node": "18.19.55",
+    "@typescript-eslint/eslint-plugin": "5.33.1",
+    "@typescript-eslint/parser": "5.33.1",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-unused-imports": "4.1.4",
+    "jest": "29.7.0",
+    "prettier": "3.3.3",
+    "ts-jest": "29.3.3",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.6.3"
   },
    "eslintConfig": {
     "extends": [

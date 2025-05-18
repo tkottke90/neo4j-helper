@@ -1,7 +1,7 @@
 import { RelationshipDirections } from './database';
 
 type NodePropKeys = string | number | symbol;
-export type Node<
+export type NodeSelector<
   Label extends string,
   Variable extends string,
   Properties = Record<string, unknown>
@@ -66,8 +66,8 @@ export class Neo4jQueryBuilder<
   }
 
   buildRelationshipReference<
-    SourceRef extends Partial<Node<string, Nodes>>,
-    TargetRef extends Partial<Node<string, Nodes>>,
+    SourceRef extends Partial<NodeSelector<string, Nodes>>,
+    TargetRef extends Partial<NodeSelector<string, Nodes>>,
     RelationshipRef extends {
       variable: string;
       label: string;
