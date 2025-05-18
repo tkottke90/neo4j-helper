@@ -1,15 +1,23 @@
 {
   "name": "neo4j-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility module for working with the Neo4j Graph Database",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint --fix src/**/*",
+    "prepack": "npm run format && npm run lint && npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "package-lock.json"
+  ],
   "keywords": ["Neo4j", "Graph Database"],
   "author": "Thomas Kottke <t.kottke90@gmail.com>",
   "license": "MIT",

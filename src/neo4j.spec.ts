@@ -59,13 +59,6 @@ jest.mock('neo4j-driver', () => {
   };
 });
 
-// Export the mock transaction for use in tests
-const mockTransaction = jest
-  .requireMock('neo4j-driver')
-  .driver()
-  .session()
-  .beginTransaction();
-
 // Mock the logger service
 const mockLogger: Logger = {
   log: jest.fn(),

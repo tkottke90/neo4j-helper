@@ -6,7 +6,12 @@ import {
   QueryResult,
   ManagedTransaction
 } from 'neo4j-driver';
-import { Database, QueryInterface, QueryOptions, RelationshipDirections } from './database';
+import {
+  Database,
+  QueryInterface,
+  QueryOptions,
+  RelationshipDirections
+} from './database';
 import { Logger } from './logging';
 import { Neo4jQueryBuilder } from './query-builder';
 import { parseDateProperties } from './helpers';
@@ -29,9 +34,7 @@ export class Neo4j extends Database<Session, ManagedTransaction> {
    * @param logger - Logger service instance
    * @private
    */
-  constructor(
-    private readonly logger: Logger
-  ) {
+  constructor(private readonly logger: Logger) {
     super();
   }
 
