@@ -73,6 +73,10 @@
       "unused-imports"
     ],
     "root": true,
+    "ignorePatterns": [
+      "dist",
+      "node_modules"
+    ],
     "rules": {
       "quotes": [
         "error",
